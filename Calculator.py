@@ -14,7 +14,6 @@ def multiply(x, y):
 def divide(x, y):
     return x / y
 
-
 print("Select operation.")
 print("1.Add")
 print("2.Subtract")
@@ -35,22 +34,31 @@ while True:
             continue
 
         if choice == '1':
-            # Collaborator1 enter Code For ADD here
-	          # Include your Name/ID/Date in comments
- 	          print(num1, "+", num2, "=", add(num1, num2))
+            # Collaborator1: Sun Haoxiang/202483890020/2025-03-28
+            
+            result = add(num1, num2)
+            print(f"{num1:.1f} + {num2:.1f} = {result:.1f}")
         elif choice == '2':
-            # Collaborator2 enter Code For SUBTRACT here
-	          # Include your Name/ID/Date in comments
-            #
+            # Collaborator2: Sun Haoxiang/202483890020/2025-03-28
+            
+            result = subtract(num1, num2)
+            sign = "-" if result < 0 else ""
+            print(f"{num1:.1f} - {num2:.1f} = {sign}{abs(result):.1f}")
         elif choice == '3':
-            # Collaborator3 enter Code For MULTIPLY here
-	          # Include your Name/ID/Date in comments
-            #
+            # Collaborator3: Sun Haoxiang/202483890020/2025-03-28
+            
+            result = multiply(num1, num2)
+            print(f"{num1:.1f} × {num2:.1f} = "
+                  f"{int(result) if result.is_integer() else result:.1f}")
         elif choice == '4':
-            # Collaborator4 enter Code For DIVIDE here
-	          # Include your Name/ID/Date in comments
-            # 
-          
+            # Collaborator4: Sun Haoxiang/202483890020/2025-03-28
+            
+            if num2 == 0:
+                print("Error: Division by zero!")
+                continue
+            result = divide(num1, num2)
+            print(f"{num1:.1f} ÷ {num2:.1f} = {result:.1f}")
+
         # check if user wants another calculation
         # break the while loop if answer is no
         next_calculation = input("Let's do next calculation? (yes/no): ")
